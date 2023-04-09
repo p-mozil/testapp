@@ -45,7 +45,7 @@ export default {
     return {
       inputField: "",
 
-      text: "ALOHAAAA!!!This is PlatePal app. Here you can browse through a wide variety of recipes from different cuisines and find inspiration for your next meal.",
+      text: "Welcome to PlatePal app. Here you can browse through a wide variety of recipes from different cuisines and find inspiration for your next meal.",
       btnText: "Yummy!",
       isLoading: false,
     };
