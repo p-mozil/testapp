@@ -110,6 +110,7 @@ export default {
       this.prompt = `Dish recipe using only ${this.ingredients}.Replace Fahrenheit temperature with Celsius. Also give ingredients and directions`;
     },
     response() {
+      let prevResponse = this.steps;
       this.steps = this.response.choices[0].text
         .split(/\n/)
         .filter((el, index, arr) => {
@@ -119,6 +120,9 @@ export default {
             arr[0].charAt(0).toLowerCase() !== el.charAt(0)
           );
         });
+        if (prevResponse === this.steps) {
+        this.dataRequest(prompt);
+      }
       this.$emit("isLoadingState", false);
     },
     steps() {
